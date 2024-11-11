@@ -49,7 +49,7 @@ Make sure your project id is set in `gcloud`:
 gcloud config set project $PROJECT_ID
 ```
 
-Run [setup.sh](setup.sh) to enable required services and grant necessary roles.
+It's important to run [setup.sh](setup.sh) to enable required services and grant necessary roles.
 
 ## Connect repository to Cloud Build
 
