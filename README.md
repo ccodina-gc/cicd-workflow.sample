@@ -70,8 +70,8 @@ trigger with the following properties:
 * Name: `workflows-trigger`
 * Event: Push to a branch
 * Repository: `ccodina-gc/cicd-workflow.sample`
-* Branch: `^master$|^staging$`
-* Included files filter: `gitops/workflow.yaml`
+* Branch: `^main$|^staging$`
+* Included files filter: `workflow.yaml`
 * Configuration type: Cloud build configuration file
 * Cloud build configuration file location: `cloudbuild.yaml`
 * Add a Substition variable with key/value: `_WORKFLOW_NAME` and `workflows-gitops`
