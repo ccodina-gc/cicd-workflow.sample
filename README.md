@@ -54,7 +54,7 @@ Run [setup.sh](setup.sh) to enable required services and grant necessary roles.
 ## Connect repository to Cloud Build
 
 You need to connect
-[workflows-demo](https://github.com/GoogleCloudPlatform/workflows-demos)
+[cicd-workflow.sample](https://github.com/ccodina-gc/cicd-workflow.sample)
 repository to Cloud Build before creating triggers. Follow the instructions
 [here](https://cloud.google.com/build/docs/automating-builds/github/connect-repo-github#connecting_a_github_repository).
 
@@ -69,11 +69,11 @@ trigger with the following properties:
 
 * Name: `workflows-trigger`
 * Event: Push to a branch
-* Repository: `GoogleCloudPlatform/workflows-demos`
+* Repository: `ccodina-gc/cicd-workflow.sample`
 * Branch: `^master$|^staging$`
 * Included files filter: `gitops/workflow.yaml`
 * Configuration type: Cloud build configuration file
-* Cloud build configuration file location: `gitops/cloudbuild.yaml`
+* Cloud build configuration file location: `cloudbuild.yaml`
 * Add a Substition variable with key/value: `_WORKFLOW_NAME` and `workflows-gitops`
 
 ## Test staging workflow
