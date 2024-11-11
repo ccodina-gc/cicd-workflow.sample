@@ -2,7 +2,7 @@ steps:
 # Deploy the test workflow with the commit sha
 - id: 'deploy-test-workflow'
   name: 'gcr.io/cloud-builders/gcloud'
-  args: ['workflows', 'deploy', '$_WORKFLOW_NAME-$BRANCH_NAME-$SHORT_SHA', '--source', 'gitops/workflow.yaml']
+  args: ['workflows', 'deploy', '$_WORKFLOW_NAME-$BRANCH_NAME-$SHORT_SHA', '--source', 'workflow.yaml']
 
 # Run the test workflow and capture the output
 - id: 'run-test-workflow'
@@ -24,6 +24,6 @@ steps:
 # Deploy the workflow
 - id: 'deploy-workflow'
   name: 'gcr.io/cloud-builders/gcloud'
-  args: ['workflows', 'deploy', '$_WORKFLOW_NAME-$BRANCH_NAME', '--source', 'gitops/workflow.yaml']
+  args: ['workflows', 'deploy', '$_WORKFLOW_NAME-$BRANCH_NAME', '--source', 'workflow.yaml']
 # [END workflows_build_config]
   

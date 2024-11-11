@@ -1,4 +1,4 @@
-REGION=us-central1
+REGION=us-east1
 
 echo "Get the project id and number"
 PROJECT_ID=$(gcloud config get-value project)
