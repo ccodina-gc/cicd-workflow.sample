@@ -19,7 +19,7 @@ steps:
 - id: 'check-test-workflow'
   name: 'gcr.io/cloud-builders/gcloud'
   entrypoint: 'bash'
-  args: ['gitops/test-$BRANCH_NAME.sh']
+  args: ['test-$BRANCH_NAME.sh']
 
 # Deploy the workflow
 - id: 'deploy-workflow'
