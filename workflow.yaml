@@ -3,7 +3,7 @@ main:
     - init:
         assign:
           - message: "Hello World!"
-          - message: "Bye World :("
+          - message: "Bye World :)"
     - returnResult:
         return: ${message}
 # [END workflows_build_workflow]
